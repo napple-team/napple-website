@@ -1,0 +1,14 @@
+# original setting
+dist/
+dev/assets/
+dev/lib/
+dev/**/*.html
+
+# node.js
+node_modules/
+.tmp/
+npm-debug.log
+
+# Sass/Compass
+.sass-cache
+*.css.map

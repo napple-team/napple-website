@@ -4,8 +4,125 @@ block variables
   - let ogp = true
 
 block content
-  .container
-    .row
-      .col-xs-12
-        h1 Hello, world!
-        p このページはEliのデフォルトページです。ここに内容を追加して下さい！！
+  section.section.section-white.section-eyecatch
+    canvas#background(width="1280" height="720")
+    .section-eyecatch-title
+      h1.text-center
+        img.logo(src="assets/img/napple-logo-full.png", alt="Napple Team")
+
+  include components/_social_buttons.pug
+
+  section.section.section-white.section-about
+    img.napple-logo-bg(src="/assets/img/napple-logo-icon.png", alt="napple")
+    .container
+      .row
+        .col-xs-12.heading
+          h2 About "Napple Team"
+          p 私たちについて
+      .row
+        .col-xs-12.text-center
+          h3 企業には、できないことをやろう。そこにあるのは「楽しい」だから。
+          p Napple Team はさまざまな能力を持った個人が集まった創作サークルです。
+          p 私たちは企業組織ではありません。そのため企業のような資金力はありません。<br>しかしそれと同時に、行動に対して企業のような採算性を求めません。<br>私たちは利益ではなく「楽しい」を追求します。
+          p みなさんと私たちが一緒に「楽しい」と思えるものを、Napple Teamは発信し続けます。
+
+  section.section.section-default.section-products
+    .container
+      .row
+        .col-xs-12.heading
+          h2 Products
+          p Napple Team がつくってきたもの
+
+    .container-fluid
+      ul.row.products-items
+        each product in site.products
+          li.col-md-4
+            .products-item.embed-responsive.embed-responsive-16by9
+              a.embed-responsive-item(href=product.url)
+                img.img-responsive(src=product.imgPath)
+                .products-item-title
+                  h3= product.title
+                  .year= product.year
+                  ul.tags
+                    each tag in product.tags
+                      li
+                        .label.label-outline= tag
+
+    .container
+      .row
+        .col-xs-12.text-center
+          p.section-products-continue To be continued...
+
+  section.section.section-white.section-member
+    .container
+      .row
+        .col-xs-12.heading
+          h2 Members
+
+      .row
+        .col-md-4
+          .panel.panel-default
+            .panel-body
+              .text-center
+                img.icon(src="assets/img/icon/windyakin.jpg", alt="windyakin")
+                .name
+                  h3 じゅりあん
+                  .name-sub windyakin
+                .social-link
+                  ul
+                    li.social-link-twitter
+                      a(href="https://twitter.com/MITLicense")
+                        i.fab.fa-twitter
+                    li.social-link-github
+                      a(href="https://github.com/windyakin")
+                        i.fab.fa-github
+        .col-md-4
+          .panel.panel-default
+            .panel-body
+              .text-center
+                img.icon.raryosu(src="assets/img/icon/raryosu.jpg", alt="raryosu")
+                .name
+                  h3 らりょす
+                  .name-sub raryosu
+                .social-link
+                  ul
+                    li.social-link-twitter
+                      a(href="https://twitter.com/raryosu")
+                        i.fab.fa-twitter
+                    li.social-link-github
+                      a(href="https://github.com/raryosu")
+                        i.fab.fa-github
+        .col-md-4
+          .panel.panel-default
+            .panel-body
+              .text-center
+                img.icon.img-responsive(src="assets/img/icon/syouyusashi.jpg", alt="syouyusashi")
+                .name
+                  h3 醤油差し
+                  .name-sub syouyusashi
+                .social-link
+                  ul
+                    li.social-link-twitter
+                      a(href="https://twitter.com/syouyusashi")
+                        i.fab.fa-twitter
+                    li.social-link-github
+                      a(href="https://github.com/syouyusashi")
+                        i.fab.fa-github
+
+  section.section.section-default.section-account
+    .container
+      .row
+        .col-xs-12.heading
+          h2 Contacts
+
+      .row
+        .col-xs-12
+          ul.list-accounts
+            li
+              a.btn.btn-twitter.btn-lg(href="https://twitter.com/NappleTeam")
+                i.fab.fa-twitter.fa-lg
+                span  @NappleTeam
+            li
+              a.btn.btn-github.btn-lg(href="https://github.com/napple-team")
+                i.fab.fa-github-alt.fa-lg
+                span  napple-team

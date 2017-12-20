@@ -23,6 +23,9 @@
       ],
       "jquery": [
         "dist/jquery.**js"
+      ],
+      "createjs-easeljs": [
+        "lib/easeljs-*.min.js"
       ]
     }
   },
@@ -32,6 +35,7 @@
     "bootstrap-honoka": "^3.3.7-a",
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.18.13",
+    "createjs-easeljs": "^0.8.2",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "eslint": "^4.13.0",

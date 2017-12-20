@@ -1,8 +1,5 @@
 # original setting
-dist/
-dev/assets/
-dev/lib/
-dev/**/*.html
+dev/
 
 # node.js
 node_modules/
@@ -12,3 +9,5 @@ npm-debug.log
 # Sass/Compass
 .sass-cache
 *.css.map
+
+docker-comopse.production.yml

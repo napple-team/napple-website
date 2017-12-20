@@ -3,5 +3,71 @@
   "description": "Creators circle",
   "twitter": "@MITLicense",
   "url": "https://napple.team/",
-  "thumbImagePath": "assets/img/ogp.png"
+  "thumbImagePath": "assets/img/ogp.png",
+
+  "products": [
+    {
+      "title": "youwatana.be",
+      "url": "https://youwatana.be/",
+      "imgPath": "/assets/img/products/youwatanabe.png",
+      "tags": ["Website"],
+      "year": 2017
+    },
+    {
+      "title": "kosen-website-crawler",
+      "url": "https://github.com/windyakin/kosen-website-crawler",
+      "imgPath": "/assets/img/products/kosen-website-crawler.png",
+      "tags": ["Software"],
+      "year": 2017
+    },
+    {
+      "title": "音ノ木坂学院 パロディWebサイト",
+      "url": "http://otonokizaka.school/",
+      "imgPath": "/assets/img/products/otonokizaka.png",
+      "tags": ["Design"],
+      "year": 2016
+    },
+    {
+      "title": "この高専がすごい！",
+      "url": "http://sugoi.windyakin.net/",
+      "imgPath": "/assets/img/products/sugoi.png",
+      "tags": ["Design", "Research"],
+      "year": 2015
+    },
+    {
+      "title": "PROCON O.S.T. Project",
+      "url": "http://ost.procon-online.net/",
+      "imgPath": "/assets/img/products/procon-ost.png",
+      "tags": ["Produce", "Design"],
+      "year": 2015
+    },
+    {
+      "title": "Proconist.net",
+      "url": "https://proconist.net/",
+      "imgPath": "/assets/img/products/proconist.png",
+      "tags": ["Design"],
+      "year": 2015
+    },
+    {
+      "title": "PROCON@Online",
+      "url": "http://procon-online.net/",
+      "imgPath": "/assets/img/products/procon-online.png",
+      "tags": ["Design"],
+      "year": 2014
+    },
+    {
+      "title": "しすけんらじお",
+      "url": "http://www.nicovideo.jp/mylist/36922986",
+      "imgPath": "/assets/img/products/sysken-radio.jpg",
+      "tags": ["Director", "Edit"],
+      "year": 2013
+    },
+    {
+      "title": "Sudio NAPPLE",
+      "url": "https://studio.napple.team/",
+      "imgPath": "/assets/img/products/studio.png",
+      "tags": ["Spin-off", "Movie"],
+      "year": "Spin-off Project"
+    }
+  ]
 }

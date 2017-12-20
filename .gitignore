@@ -10,4 +10,4 @@ npm-debug.log
 .sass-cache
 *.css.map
 
-docker-comopse.production.yml
+docker-compose.production.yml

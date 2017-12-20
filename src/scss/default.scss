@@ -7,6 +7,7 @@
 
 $brand-twitter: #55acee;
 $brand-github: #333;
+$brand-medium: #1f1f1f;
 
 .btn-twitter,.btn-facebook {
   .fa.fa-lg {
@@ -19,6 +20,9 @@ $brand-github: #333;
 }
 .btn-github {
   @include button-variant(#fff, $brand-github, darken($brand-github, 2%));
+}
+.btn-medium {
+  @include button-variant(#fff, $brand-medium, darken($brand-medium, 2%));
 }
 
 .section {
@@ -158,6 +162,9 @@ $brand-github: #333;
   }
   h3 {
     margin-top: 0;
+  }
+  .more {
+    margin-top: $line-height-computed * 2;
   }
 }
 
@@ -302,16 +309,20 @@ ul.products-items {
 }
 
 .section-account {
-  ul.list-accounts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    > li {
-      padding: 0 $padding-xs-horizontal;
+}
+
+ul.list-accounts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  > li {
+    padding: 0 $padding-xs-horizontal;
+    i {
+      padding-right: $padding-base-horizontal;
     }
   }
 }

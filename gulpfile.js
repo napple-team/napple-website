@@ -59,10 +59,10 @@ Gulp.task('clean:dist', (callback) => {
  * html build tasks
  * ============================== */
 Gulp.task('build:html', () => {
-  let SiteVariablesJSON = JSON.parse(File.readFileSync('./src/html/variables.json'));
+  let siteVariablesJSON = JSON.parse(File.readFileSync('./src/html/variables.json'));
   return Gulp.src(['src/html/**/*.pug', '!src/html/**/_*.pug'], {base: `src/html/`})
     .pipe(Plugins.plumber())
-    .pipe(Plugins.pug({locals: { site: SiteVariablesJSON }, pretty: true}))
+    .pipe(Plugins.pug({locals: { site: siteVariablesJSON }, pretty: true}))
     .pipe(Gulp.dest(`${distDir}/`));
 });
 
@@ -110,7 +110,7 @@ Gulp.task('build:css', ['lint:scss'], () => {
     .pipe(Plugins.plumber({
       errorHandler: function (err) {
         console.log(err.message);
-        this.end();
+        this.emit('end');
       }
     }))
     // sass compile
@@ -229,12 +229,6 @@ Gulp.task('release', () => {
   distDir = 'dist'
 });
 
-// copy to dist/ from dev/
-Gulp.task('copy:dist', () => {
-  Gulp.src(['**/*', '!assets/**/*', '!lib/**/*'], {cwd: 'dev/'})
-    .pipe(Gulp.dest('dist/'));
-});
-
 /* ================================
  * Mixed tasks
  * ============================== */
@@ -249,5 +243,5 @@ Gulp.task('dev', () => {
   RunSequence(['init'], ['lib'], ['build'], ['serve', 'watch']);
 });
 Gulp.task('dist', () => {
-  RunSequence(['release'], ['clean:dist', 'init'], ['lib'], ['build', 'copy:dist'], ['optimize']);
+  RunSequence(['release'], ['clean:dist', 'init'], ['lib'], ['build'], ['optimize']);
 });

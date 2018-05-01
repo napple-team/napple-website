@@ -1,5 +1,7 @@
 # Napple Website
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/napple-team/napple-website.svg)](https://greenkeeper.io/)
+
 [https://napple.team/](https://napple.team/)
 
 ## Description

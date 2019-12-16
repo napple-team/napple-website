@@ -8,10 +8,10 @@
 
 ## Usage
 
-### Development
+### Dev
 
 ```
-make dev
+gulp dev
 ```
 
 * BrowserSync サーバーが立ち上がり、ファイル更新を検出するとビルドが走ります
@@ -20,30 +20,10 @@ make dev
 ### Build
 
 ```
-make build
+gulp dist
 ```
 
-* アセットをビルドしたものが `dist/` ディレクトリに展開されます
-
-### Run local nginx server
-
-```
-make local
-```
-
-* `make build` したものを nginx サーバー上で確認することができます
-* http://localhost:8080/
-
-### For production
-
-以下は Production 環境上で動かすためのコマンドです。実行には `docker-compose.production.yml` が必要になります。
-
-```
-make up
-```
-```
-make down
-```
+* アセットをビルドしたものが `docs/` ディレクトリに展開されます
 
 ## License
 

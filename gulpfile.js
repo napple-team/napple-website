@@ -226,7 +226,7 @@ Gulp.task('serve', () => {
  * ============================== */
 // change output dir
 Gulp.task('release', () => {
-  distDir = 'docs'
+  distDir = 'doc'
 });
 
 /* ================================

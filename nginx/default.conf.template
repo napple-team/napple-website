@@ -1,0 +1,20 @@
+server {
+  listen 80;
+  server_name ${WRONG_HOST};
+  return 301 https://${TRUES_HOST}$request_uri;
+}
+
+server {
+  listen 80 default_server;
+  server_name _;
+
+  root /usr/share/nginx/html;
+
+  location / {
+    index index.html;
+
+    if ($http_x_forwarded_proto = 'http') {
+      return 301 https://$host$request_uri;
+    }
+  }
+}

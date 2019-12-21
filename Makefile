@@ -1,11 +1,11 @@
 setup:
-	npm install
+	docker-compose -f docker-compose.dev.yml build --pull
 
 build: setup
-	npm run build
+	docker-compose -f docker-compose.dev.yml run --rm builder npm run build
 
 dev:
-	npm run start
+	docker-compose -f docker-compose.dev.yml run --rm builder npm run start
 
 local: build
 	docker-compose up
